@@ -15,20 +15,22 @@ const PortalPage = () => {
             if (isLoaded && user) {
                 const response = await apiClient.get(`/users/${user.id}`);
                 console.log(response.data);
-                if (!response.data.exists) {
-                    setRole(response.data.role);
-                    if (response.data.role === 'candidate') {
-                        router.push('portal/candidate/profile');
-                    } else if (response.data.role === 'employer') {
-                        router.push('portal/employer/profile');
-                    }
+                setRole(response.data.role);
+                if (response.data.role === 'candidate') {
+                    router.push('portal/candidate/profile');
+                } else if (response.data.role === 'admin') {
+                    router.push('portal/admin/users');
+                } else if (response.data.role === 'committee') {
+                    router.push('portal/committee/postings');
                 }
             }
         }
         fetchData();
     }, [isLoaded, user])
     return (
-        <div>Loading...</div>
+        <div>
+            No role was assigned to you contact the admin if you think this is a mistake.
+        </div>
     )
 }
 

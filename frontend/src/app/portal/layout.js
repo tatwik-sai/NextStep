@@ -10,11 +10,11 @@ const AppLayout = ({children}) => {
     
     return (
         <div>
-        <h1>App Layout</h1>
+        {/* <h1>App Layout</h1>
         {isLoaded && user ? <div>{user.firstName} {user.lastName}</div> : <div>Loading...</div>}
         <Button className="flex gap-3 items-center p-3 pb-8 w-full justify-start cursor-pointer" onClick={() => signOut()}>
                 <span className="text-white text-md font-medium">Logout</span>
-        </Button>
+        </Button> */}
         {children}
         </div>
     )

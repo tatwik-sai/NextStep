@@ -13,6 +13,30 @@ const candidateSchema = new mongoose.Schema({
         type: Array,
         required: false,
     },
+    description: {
+        type: String,
+        required: false,
+    },
+    experience: {
+        type: [{
+            company: { type: String, required: true },
+            role: { type: String, required: true },
+            duration: { type: String, required: true },
+        }],
+        required: false,
+    },
+    projects: {
+        type: [{
+            name: { type: String, required: true },
+            description: { type: String, required: true },
+            link: { type: String, required: true },
+        }],
+        required: false,
+    },
+    portfolioUrl: {
+        type: String,
+        required: false,
+    },
     resumeUrl: {
         type: String,
         required: false,
