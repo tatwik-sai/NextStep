@@ -647,10 +647,11 @@ const Postings = () => {
         }
     }, [isOpen, posting]);
     
-    if (!isOpen || !posting) return null;
 
     // Get detailed dummy info for the selected posting
-    const details = useMemo(() => getDummyDetails(posting._id), [posting._id]); 
+    const details = useMemo(() => getDummyDetails(posting?._id), [posting?._id]); 
+
+    if (!isOpen || !posting) return null;
 
     const tabs = [
       { id: 'overview', name: 'Overview' },
@@ -684,7 +685,7 @@ const Postings = () => {
                   </ul>
                 </div>
                 <div className="border-t pt-4">
-                  <h3 className="text-xl font-bold text-gray-800 border-b pb-2 mb-3">What You'll Gain</h3>
+                  <h3 className="text-xl font-bold text-gray-800 border-b pb-2 mb-3">What Youll Gain</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
                       {details.benefits.map((b, i) => <li key={i}>{b}</li>)}
                   </ul>

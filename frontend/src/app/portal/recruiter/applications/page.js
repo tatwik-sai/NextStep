@@ -86,11 +86,11 @@ const InfoCard = ({ title, value, children }) => (
 );
 
 const CandidateDetailsModal = ({ isOpen, onClose, application, onStatusUpdate }) => {
-    if (!isOpen || !application) return null;
 
     const [isUpdating, setIsUpdating] = useState(false);
     const [scheduleTime, setScheduleTime] = useState('');
     const [action, setAction] = useState(null); // 'approve', 'reject', or 'schedule'
+        if (!isOpen || !application) return null;
 
     const handleAction = async () => {
         if (!action) return;
@@ -152,7 +152,7 @@ const CandidateDetailsModal = ({ isOpen, onClose, application, onStatusUpdate })
                     {/* Profile Link */}
                     <div className="pt-4 border-t border-gray-100">
                         <a 
-                            href={ "/portal/candidate/user_33FfjGozqseqflPOgGYp06WC8gv"} 
+                            href={ "/portal/candidate/user_33NigBBN7Krn0ywvGBgS2n7de26"} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 font-medium transition duration-150"
@@ -214,11 +214,11 @@ const CandidateDetailsModal = ({ isOpen, onClose, application, onStatusUpdate })
 };
 
 const InternshipActionModal = ({ isOpen, onClose, intern, onAction }) => {
-    if (!isOpen || !intern) return null;
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [notes, setNotes] = useState('');
     const [actionType, setActionType] = useState('review'); // 'review' or 'end'
+        if (!isOpen || !intern) return null;
 
     const handleAction = async () => {
         setIsSubmitting(true);

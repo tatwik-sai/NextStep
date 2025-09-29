@@ -73,10 +73,10 @@ const getStatusStyles = (status) => {
 // --- Sub-Components ---
 
 const InterviewDetailsModal = ({ isOpen, onClose, interview, onStatusUpdate }) => {
-    if (!isOpen || !interview) return null;
 
-    const [newStatus, setNewStatus] = useState(interview.status);
+    const [newStatus, setNewStatus] = useState(interview?.status);
     const [isUpdating, setIsUpdating] = useState(false);
+        if (!isOpen || !interview) return null;
 
     const isJoinDisabled = ['Completed', 'Cancelled', 'Rescheduled'].includes(interview.status);
 
@@ -309,7 +309,7 @@ const InterviewTimetable = ({ interviews, onOpenDetails }) => {
 
     return (
         <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-gray-800">Today's Schedule ({formatDate(today)})</h3>
+            <h3 className="text-2xl font-bold text-gray-800">Todays Schedule ({formatDate(today)})</h3>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-center p-4 bg-indigo-50 border border-indigo-200 rounded-lg mb-4">
                     <p className="text-xl font-bold text-indigo-700">

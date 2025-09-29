@@ -165,7 +165,7 @@ const Postings = () => {
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-black/30 pb-2">Today's Schedule</h3>
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-black/30 pb-2">Todays Schedule</h3>
 
                     <div className="grid grid-cols-[50px_1fr] gap-x-2 relative min-h-[500px]">
                         {/* Time Labels Column */}

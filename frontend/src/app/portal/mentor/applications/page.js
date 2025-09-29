@@ -57,9 +57,9 @@ const getStatusStyles = (status) => {
 // --- Sub-Components ---
 
 const ReviewModal = ({ isOpen, onClose, application, onStatusUpdate }) => {
-    if (!isOpen || !application) return null;
 
     const [isUpdating, setIsUpdating] = useState(false);
+    if (!isOpen || !application) return null;
 
     const handleAction = async (newStatus) => {
         setIsUpdating(true);
@@ -100,7 +100,7 @@ const ReviewModal = ({ isOpen, onClose, application, onStatusUpdate }) => {
                     {/* Resume/Attachment Link */}
                     <div className="pt-4 border-t border-gray-100">
                         <a 
-                            href={ "/portal/candidate/user_33FfjGozqseqflPOgGYp06WC8gv"} 
+                            href={ "/portal/candidate/user_33NigBBN7Krn0ywvGBgS2n7de26"} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 font-medium transition duration-150"
@@ -153,7 +153,7 @@ const Postings = () => {
 
     // Initial Filter State (Reads from mock URL parameter)
     // Simulating the effect of a URL like '?jobId=101'
-    const mockURLParams = new URLSearchParams(window.location.search || '?jobId=');
+    const mockURLParams = new URLSearchParams('?jobId=');
     const initialJobId = mockURLParams.get('jobId');
 
     const [filters, setFilters] = useState({

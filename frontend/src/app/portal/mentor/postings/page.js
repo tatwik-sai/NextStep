@@ -523,10 +523,10 @@ const Postings = () => {
             }
         }, [isOpen, posting]);
         
-        if (!isOpen || !posting) return null;
 
         // Get detailed dummy info for the selected posting
-        const details = useMemo(() => getDummyDetails(posting._id), [posting._id]); 
+        const details = useMemo(() => getDummyDetails(posting?._id), [posting?._id]); 
+        if (!isOpen || !posting) return null;
 
         // Tabs for Mentor/Recruiter view
         const tabs = [

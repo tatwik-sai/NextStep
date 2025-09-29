@@ -669,11 +669,10 @@ const Postings = () => {
         }
     }, [isOpen, posting]);
     
-    if (!isOpen || !posting) return null;
 
     // Get detailed dummy info for the selected posting
-    const details = useMemo(() => getDummyDetails(posting._id), [posting._id]); 
-
+    const details = useMemo(() => getDummyDetails(posting?._id), [posting?._id]); 
+    if (!isOpen || !posting) return null;
     const tabs = [
       { id: 'overview', name: 'Overview' },
       { id: 'company', name: 'Details' },
@@ -706,7 +705,7 @@ const Postings = () => {
                   </ul>
                 </div>
                 <div className="border-t pt-4">
-                  <h3 className="text-xl font-bold text-gray-800 border-b pb-2 mb-3">What You'll Gain</h3>
+                  <h3 className="text-xl font-bold text-gray-800 border-b pb-2 mb-3">What Youll Gain</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
                       {details.benefits.map((b, i) => <li key={i}>{b}</li>)}
                   </ul>
@@ -791,8 +790,8 @@ const Postings = () => {
   // --- New Application Dashboard Components ---
 
   const ApplicationDetailsModal = ({ isOpen, onClose, application }) => {
-    if (!isOpen || !application) return null;
     const router = useRouter();
+    if (!isOpen || !application) return null;
 
     const getStatusColor = (status) => {
         switch(status) {
@@ -825,7 +824,7 @@ const Postings = () => {
                     </div>
                     <div className="pt-4 border-t border-gray-100">
                         <a 
-                            href={ "/portal/candidate/user_33FfjGozqseqflPOgGYp06WC8gv"} 
+                            href={ "/portal/candidate/user_33NigBBN7Krn0ywvGBgS2n7de26"} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 font-medium transition duration-150"

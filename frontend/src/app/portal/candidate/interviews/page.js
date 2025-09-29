@@ -74,7 +74,6 @@ const isToday = (dateString) => {
 
 // Detailed Interview Modal
 const InterviewDetailsModal = ({ isOpen, onClose, interview }) => {
-    if (!isOpen || !interview) return null;
 
     const [prepLoading, setPrepLoading] = useState(false);
     const [prepContent, setPrepContent] = useState(null);
@@ -87,6 +86,8 @@ const InterviewDetailsModal = ({ isOpen, onClose, interview }) => {
             setPrepError(null);
         }
     }, [isOpen, interview]);
+
+    if (!isOpen || !interview) return null;
 
     const generateInterviewPrep = async () => {
         setPrepLoading(true);
@@ -293,7 +294,7 @@ const InterviewTimetable = ({ interviews, onSelectInterview }) => {
 
     return (
         <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Today's Schedule ({formatDate('2025-09-28T00:00:00Z')})</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Todays Schedule ({formatDate('2025-09-28T00:00:00Z')})</h3>
             
             <div className="relative flex border border-gray-200 rounded-lg">
                 
