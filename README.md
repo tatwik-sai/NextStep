@@ -38,7 +38,7 @@ CLERK_SECRET_KEY=your_clerk_secret_key
 npm run dev
 ```
 
-Application available at `http://localhost:3000`
+[Visit NextStep](https://next-step-iota-tan.vercel.app/)
 
 ---
 
