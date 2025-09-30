@@ -357,7 +357,7 @@ const App = () => {
                         <p className="text-xl mb-8 opacity-90">Ready to move from manual chaos to a streamlined, software-driven process? Discover how our platform can help.</p>
                         <div className="flex gap-4 justify-center flex-wrap">
                             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold text-base rounded-xl shadow-md hover:bg-gray-100 transition-all duration-300">Get Started</a>
-                            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold text-base rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300">View on GitHub</a>
+                            <a href="https://github.com/tatwik-sai/NextStep" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold text-base rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300">View on GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -401,7 +401,7 @@ const App = () => {
                     </div>
                     <div className="border-t border-gray-800 pt-8 text-center text-gray-300 flex flex-col gap-4">
                         <div>
-                            <span>Contact <a href="mailto:contact@nextstep.edu" className="text-blue-600 no-underline transition-all duration-300 hover:text-blue-400 hover:underline">contact@nextstep.edu</a></span>
+                            <span>Contact <a href="mailto:teamnextstep.contact@gmail.com" className="text-blue-600 no-underline transition-all duration-300 hover:text-blue-400 hover:underline">TeamNextStep</a></span>
                         </div>
                         <div>
                             &copy; 2025 NextStep. All rights reserved.
